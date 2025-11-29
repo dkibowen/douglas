@@ -14,3 +14,10 @@ def posts_by_category(request,pk):
         "category":category,
     }
     return render(request,'posts_by_category.html',context)
+
+def single_blog(request,slug):
+    post = Blog.objects.get(status='Published',slug=slug)
+    context = {
+        "post":post,
+    }
+    return render(request,'blogs.html',context)
