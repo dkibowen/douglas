@@ -10,6 +10,7 @@
             <div class="card-body">
                 <h3><a href="{% url 'single_blog' post.slug %}" class="text-dark">{{ post.title }}</a></h3>
                 <small class="mb-1 text-muted">{{ post.updated_at | timesince }} ago| {{ post.author }}</small>
+                <figure class="mb-4"><img class="img-fluid rounded" src="{{ post.featured_image.url }}" alt="..." /></figure>
                 <p class="card-text">{{ post.short_description | truncatewords:15 }}</p>
             </div>
         </div>

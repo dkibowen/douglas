@@ -38,9 +38,8 @@
         <div class="nav-scroller py-1 mb-2">
             <nav class="nav d-flex justify-content-between">
                 {% for cat in categories %}
-                <a class="p-2 text-muted" href="{% url 'posts_by_category' cat.id %}">{{ cat.category_name }}</a>
-                {% endfor %}
-            </nav>
+                <a class="p-2 text-muted" href="{% url 'posts_by_category' cat.id %}">{{ cat.category_name }}</a>                
+                {% endfor %}                
         </div>
 
         {% block content %}
@@ -48,7 +47,7 @@
         {% endblock %}
 
         <footer class="blog-footer">
-            <p>Blog built with by <a href="#">Douglas Kibowen</a></p>
+            <p>Projects By <a href="#">Douglas Kibowen</a></p>
         </footer>
 </body>
 
