@@ -21,8 +21,8 @@
                         src="{{ post.featured_image.url }}" alt="..." /></figure>
                 <!-- Post content-->
                 <section class="mb-5">
-                    <p class="fs-5 mb-4">{{ post.short_description }}</p>
-                    <p class="fs-5 mb-4">{{ post.blog_body }}</p>
+                    <p class="fs-5 mb-4">{{ post.short_description|linebreaks }}</p>
+                    <p class="fs-5 mb-4">{{ post.blog_body | linebreaks }}</p>
                     <!-- Comments -->
                      <h4>Comments ({{ comments_count }})</h4>
                      {% if comments %}
